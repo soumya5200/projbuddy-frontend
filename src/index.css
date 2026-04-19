@@ -1,0 +1,66 @@
+/* src/index.css */
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Floating animation for images */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+/* Class to apply floating animation */
+.float-animation {
+  animation: float 5s ease-in-out infinite;
+}
+/* Form slide + fade in animation */
+@keyframes slideFade {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-slideFade {
+  animation: slideFade 1s ease-out forwards;
+}
+
+/* Optional: Form hover glow effect */
+.form-hover:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* remove top extra space */
+.CodeMirror {
+  height: 100% !important;
+}
+
+.CodeMirror pre {
+  margin: 0 !important;
+}
+
+.CodeMirror-lines {
+  padding-top: 0px !important;
+}
+
+/* 🔥 IMPORTANT FIX */
+.CodeMirror-scroll {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 🔥 LINE NUMBER ALIGN FIX */
+.CodeMirror-gutters {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
